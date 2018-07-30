@@ -29,7 +29,17 @@ module.exports = {
 
                 use: ['style-loader', 'css-loader']
 
+            },
 
+
+
+            ///Babel
+            {
+                test: /\.js$/,
+
+                exclude: /node_modules/,
+
+                loader: "babel-loader"
 
             }
 
