@@ -14,6 +14,27 @@ module.exports = {
 
         filename: 'bundle.js'
 
+    },
+
+
+    module: {
+
+        rules: [
+
+            {
+
+                test: /\.css$/,
+
+                //takes the array from right to left
+
+                use: ['style-loader', 'css-loader']
+
+
+
+            }
+
+
+        ]
     }
 
 
