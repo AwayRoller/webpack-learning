@@ -2,6 +2,8 @@ var webpack = require('webpack');
 
 var path = require('path');
 
+var inProd = (process.env.NODE_ENV === 'production');
+
 
 module.exports = {
 
@@ -45,7 +47,30 @@ module.exports = {
 
 
         ]
-    }
+    },
+
+
+
+
+
+    plugins: [
+
+
+
+
+
+    ]
 
 
 };
+
+
+if (inProd) {
+
+    module.exports.plugins.push(
+
+        //new webpack.optimize.optimization.minimize
+
+    );
+
+}
