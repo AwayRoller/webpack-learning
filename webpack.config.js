@@ -45,6 +45,22 @@ module.exports = {
 
               use: ExtractTextPlugin.extract({
 
+                  /*use: [
+                      {
+
+                          loader: 'css-loader',
+
+                          options: { url: false }
+
+                      },
+
+                      'sass-loader'
+
+                  ],
+                   */
+
+                  //use: ['raw-loader', 'sass-loader'],
+
                   use: ['css-loader', 'sass-loader'],
 
                   fallback: 'style-loader'
@@ -52,6 +68,22 @@ module.exports = {
               })
 
             },
+
+            {
+
+                test: /\.png|jpe?g|gif$/,
+
+                loader: 'file-loader',
+
+                options: {
+
+                    name:'images/[name].[ext]'
+
+                }
+
+
+            },
+
 
 
 
