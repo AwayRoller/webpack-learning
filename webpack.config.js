@@ -25,6 +25,18 @@ module.exports = {
 
             {
 
+              test: /\.s[ac]ss$/,
+
+              //compile sass to css but nothing more
+              //use: ['sass-loader']
+
+              //I need a css and a style loader too
+              use: ['style-loader', 'css-loader', 'sass-loader']
+
+            },
+
+            {
+
                 test: /\.css$/,
 
                 //takes the array from right to left

@@ -5,13 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-
     "hello": "echo 'hello'",
-
     "dev": "node_modules/.bin/webpack",
-
     "prod": "NODE_ENV=production webpack",
-
     "watch": "npm run dev -- --watch"
   },
   "repository": {
@@ -30,6 +26,8 @@
     "babel-loader": "^7.1.5",
     "babel-preset-es2017": "^6.24.1",
     "css-loader": "^1.0.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0"
