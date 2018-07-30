@@ -6,4 +6,6 @@ Learning some basics about Webpack
 3. Modules - import, export
 4. Loaders - transformers
 5. ES2017 Compilation with Babel
-6. Sass Compilation
+6. Minification and Environments
+7. Sass Compilation
+8. Extract CSS to a Dedicated File

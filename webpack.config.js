@@ -4,17 +4,33 @@ var path = require('path');
 
 var inProd = (process.env.NODE_ENV === 'production');
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 module.exports = {
 
-    entry: './src/main.js',
+    entry: {
+
+
+        app: [
+
+
+            './src/main.js',
+
+            './src//main.scss'
+
+        ]
+
+
+
+    },
 
     output: {
 
         path: path.resolve(__dirname, './dist'),
 
 
-        filename: 'bundle.js'
+        filename: '[name].js'
 
     },
 
@@ -27,21 +43,13 @@ module.exports = {
 
               test: /\.s[ac]ss$/,
 
-              //compile sass to css but nothing more
-              //use: ['sass-loader']
+              use: ExtractTextPlugin.extract({
 
-              //I need a css and a style loader too
-              use: ['style-loader', 'css-loader', 'sass-loader']
+                  use: ['css-loader', 'sass-loader'],
 
-            },
+                  fallback: 'style-loader'
 
-            {
-
-                test: /\.css$/,
-
-                //takes the array from right to left
-
-                use: ['style-loader', 'css-loader']
+              })
 
             },
 
@@ -67,8 +75,13 @@ module.exports = {
 
     plugins: [
 
+        new ExtractTextPlugin('[name].css')
 
+        /*new webpack.LoaderOptionsPlugin({
 
+            minimize: inProd
+
+        })*/
 
 
     ]
