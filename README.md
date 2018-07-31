@@ -10,3 +10,4 @@ Learning some basics about Webpack
 7. Sass Compilation
 8. Extract CSS to a Dedicated File
 9. The Relative URL Conundrum
+10. CSS Purification
