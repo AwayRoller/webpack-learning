@@ -10,6 +10,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var inProd = (process.env.NODE_ENV === 'production');
 
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+
 
 module.exports = {
 
@@ -23,18 +25,24 @@ module.exports = {
 
             './src//main.scss'
 
-        ]
+        ],
 
+        vendor: ['jquery']
 
 
     },
+
+
 
     output: {
 
         path: path.resolve(__dirname, './dist'),
 
+        /*not a content specific hash*/
+        //filename: '[name].[hash].js'
 
-        filename: '[name].js'
+        /*use this*/
+        filename: '[name].[chunkhash].js'
 
     },
 
@@ -120,6 +128,16 @@ module.exports = {
             paths: glob.sync(path.join(__dirname, 'index.html')),
 
         })*/
+
+        new CleanWebpackPlugin(['dist'], {
+
+            root:__dirname,
+
+            verbose: true,
+
+            dry: false
+
+        })
 
 
     ]

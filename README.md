@@ -11,3 +11,4 @@ Learning some basics about Webpack
 8. Extract CSS to a Dedicated File
 9. The Relative URL Conundrum
 10. CSS Purification
+11. Long-Term Caching
