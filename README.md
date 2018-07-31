@@ -14,3 +14,4 @@ Learning some basics about Webpack
 11. Long-Term Caching
 12. Webpack Manifests
 13. Image optimization
+14. Developing Webpack Plugins

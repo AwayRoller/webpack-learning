@@ -12,6 +12,8 @@ var inProd = (process.env.NODE_ENV === 'production');
 
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
+let BuildManifestPlugin = require('./build/plugins/BuildManifestPlugin');
+
 
 module.exports = {
 
@@ -164,8 +166,8 @@ module.exports = {
 
 
 
-        /*Custom plugin*/
-        function() {
+        /*Custom plugins*/
+        /*function() {
 
             this.plugin('done', stats => {
 
@@ -179,7 +181,12 @@ module.exports = {
 
             });
 
-        }
+        },
+*/
+
+
+
+        new BuildManifestPlugin()
 
 
 
