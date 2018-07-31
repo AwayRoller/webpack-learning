@@ -12,3 +12,4 @@ Learning some basics about Webpack
 9. The Relative URL Conundrum
 10. CSS Purification
 11. Long-Term Caching
+12. Webpack Manifests
