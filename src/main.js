@@ -1,1 +1,1 @@
-alert('hello all');
+require('./styles.css')

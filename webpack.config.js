@@ -81,17 +81,39 @@ module.exports = {
 
             },
 
+
+            {
+                test: /\.css$/,
+
+                use: 'css-loader'
+
+            },
+
+
             {
 
                 test: /\.png|jpe?g|gif$/,
 
-                loader: 'file-loader',
+                loaders: [
 
-                options: {
+                    {
 
-                    name:'images/[name].[ext]'
+                        loader: 'file-loader',
 
-                }
+                        options: {
+
+                            name:'images/[name].[ext]'
+
+                        }
+
+
+
+                    },
+
+                    'img-loader'
+
+
+                ]
 
 
             },

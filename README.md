@@ -13,3 +13,4 @@ Learning some basics about Webpack
 10. CSS Purification
 11. Long-Term Caching
 12. Webpack Manifests
+13. Image optimization
